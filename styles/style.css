@@ -29,6 +29,15 @@
   --clr-fragrant: hsl(327, 51%, 47%);
   --clr-fast: hsl(218, 11%, 34%);
 
+  --clr-accent: var(--clr-green-400);
+  --clr-accent-light-1: var(--clr-green-100);
+
+  --clr-primary-light-1: var(--clr-neutral-100);
+  --clr-primary-light-2: var(--clr-neutral-200);
+  --clr-primary-light-3: var(--clr-neutral-300);
+  --clr-primary: var(--clr-neutral-400);
+  --clr-primary-dark: var(--clr-neutral-800);
+
   --border-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
   --font-base: "Open Sans", "Segoe UI", Tahoma, sans-serif;
@@ -49,15 +58,6 @@
   --fs-800: 2.5rem;
   --fs-900: 3rem;
 
-  --clr-accent: var(--clr-green-400);
-  --clr-accent-light-1: var(--clr-green-100);
-
-  --clr-primary-light-1: var(--clr-neutral-100);
-  --clr-primary-light-2: var(--clr-neutral-200);
-  --clr-primary-light-3: var(--clr-neutral-300);
-  --clr-primary: var(--clr-neutral-400);
-  --clr-primary-dark: var(--clr-neutral-800);
-
   --fw-regular: var(--fw-400);
   --fw-medium: var(--fw-500);
   --fw-semi-bold: var(--fw-600);
@@ -68,13 +68,25 @@
 /* ----------------------- */
 /* || GLOBAL STYLES */
 /* ----------------------- */
-h2,
-h3 {
-  font-weight: var(--fw-bold);
-  line-height: 1;
+html {
+  font-size: 100%;
 }
 
-h2 {
+body {
+  font-family: var(--font-base);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  line-height: 1.5;
+  color: var(--clr-primary-dark);
+  background-color: var(--clr-accent-light-1);
+}
+
+h1, h2, h3 {
+  font-weight: var(--fw-bold);
+  line-height: 1.1;
+}
+
+h1, h2 {
   font-size: var(--fs-700);
 }
 
@@ -94,11 +106,6 @@ a {
   }
 }
 
-body {
-  font-family: var(--font-base);
-  background-color: var(--clr-accent-light-1);
-  color: var(--clr-primary-dark);
-}
 
 /* ----------------------- */
 /* || COMPOSITION */
@@ -107,25 +114,168 @@ body {
   margin-block-start: var(--flow-space, 1em);
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.wrapper {
+  width: min(50vw, 2000px);
+  margin-inline: auto;
+}
+
 /* ----------------------- */
 /* || UTILITY */
 /* ----------------------- */
-/* .visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
+.visually-hidden {
   position: absolute;
-  white-space: nowrap;
   width: 1px;
-} */
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.center {
+  margin-inline: auto;
+}
+
+.bg-pl-1 {
+  background-color: var(--clr-primary-light-1, white);
+}
+
+.bg-accent {
+  background-color: var(--clr-accent);
+}
+
+.clr-accent {
+  stroke: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.m-4 {
+  margin: 4rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-4 {
+  padding: 4rem;
+}
+
+.border-round-2 {
+  border: 2px solid var(--clr-neutral-900);
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+.text-align-start {
+  text-align: start;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
 
 /* ----------------------- */
 /* || BLOCK */
 /* ----------------------- */
+.logo {
+  --_logo-color: var(--logo-color, red);
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  text-transform: uppercase;
+
+  svg {
+    height: 3em;
+    width: auto;
+    stroke: var(--_logo-color);
+  }
+
+  .company-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    font-weight: var(--fw-700);
+    color: var(--_logo-color);
+  }
+}
+
+.card {
+  background-color: var(--clr-primary-light-1);
+  border: var(--border-shadow);
+}
+
+.keyword {
+  font-weight: var(--fw-700);
+  background-color: var(--clr-accent);
+  color: var(--clr-primary-light-1);
+  padding: 0.25em 1em;
+  border-radius: 4rem;
+}
+
+.author {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  img {
+    height: 4em;
+    border: 2px solid var(--clr-neutral-900);
+    border-radius: 50%;
+  }
+  
+  span {
+    font-weight: var(--fw-600);
+  }
+}
 
 
 /* ----------------------- */
 /* || EXCEPTION */
 /* ----------------------- */
+body > header {
+  color: var(--clr-accent);
+
+  .logo {
+    --logo-color: var(--clr-accent);
+  }
+}
+
+footer {
+  color: var(--clr-primary-light-1);
+
+  .logo {
+    --logo-color: var(--clr-primary-light-1);
+  }
+}
 
