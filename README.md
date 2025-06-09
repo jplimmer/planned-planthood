@@ -25,6 +25,7 @@ git clone https://github.com/jplimmer/planned-planthood.git
 ```
 ├── index.html
 ├── styles/
+|   ├── reset.css
 │   └── styles.css
 ├── assets/
 │   └── images/
