@@ -196,6 +196,31 @@ body > header {
   }
 }
 
+button {
+  margin: 0.1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--clr-accent);
+  color: var(--clr-primary-light-1);
+  border: none;
+  border-radius: 2rem;
+
+  &:hover, &:focus-visible {
+    cursor: pointer;
+    outline: 0.25rem solid var(--clr-sunloving);
+  }
+}
+
+form {
+  max-width: 100%;
+  padding-inline-start: 1rem;
+  border: 0.1rem solid var(--clr-neutral-900);
+  border-radius: 2rem;
+
+  input {
+    border: none;
+  }
+}
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
