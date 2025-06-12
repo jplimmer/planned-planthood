@@ -149,7 +149,7 @@ a {
 
 .flex-row {
   display: flex;
-  flex-direction: row;
+  gap: 1em;
 }
 
 .flex-col {
@@ -206,10 +206,6 @@ a {
 
 .p-b-l {
   padding-block: var(--space-large, 2rem);
-}
-
-.gap-1ch {
-  gap: 1ch;
 }
 
 /* ----------------------- */
@@ -374,9 +370,9 @@ form {
     }
 
     footer {
-        display: grid;
+        /* display: grid;
         align-self: end;
-        /* gap: 1rem; */
+        gap: 1rem; */
         font-weight: 600;
         margin-block-end: 0;
         
@@ -396,7 +392,7 @@ form {
 body > footer {
   color: var(--clr-primary-light-1);
 
-  
+
 
   .logo {
     --logo-color: var(--clr-primary-light-1);
