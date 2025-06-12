@@ -68,7 +68,15 @@
   --border-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   
   /* Layout */
+  --content-margin: 1rem;
+  --content-width: 60rem;
   --flow-space: 1em;
+
+  --space-small: 0.5rem;
+  --space-medium: 1rem;
+  --space-large: 2rem;
+
+  --card-width: 12rem;
 }
 
 /* ----------------------- */
@@ -91,7 +99,7 @@ body {
 h1, h2 {
   font-weight: var(--fw-bold);
   line-height: 1.1;
-    font-size: var(--fs-700);
+  font-size: var(--fs-700);
 }
 
 a {
@@ -113,9 +121,26 @@ a {
   margin-block-start: var(--flow-space, 1em);
 }
 
-.wrapper {
-  width: min(50vw, 100rem);
-  margin-inline: auto;
+.content-grid {
+  display: grid;
+  grid-template-columns: 
+    [full-width-start] minmax(var(--content-margin), 1fr) 
+    [content-start] min(calc(100% - 2*var(--content-margin)), var(--content-width)) 
+    [content-end] minmax(var(--content-margin), 1fr) [full-width-end];
+}
+
+.content-grid > * {
+  grid-column: content;
+}
+
+.content-grid > .full-width {
+  grid-column: full-width;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
 }
 
 .center {
@@ -126,6 +151,12 @@ a {
   display: flex;
   flex-direction: row;
 }
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 
 /* ----------------------- */
 /* || UTILITY */
@@ -165,8 +196,20 @@ a {
 }
 
 /* Layout */
-.p-2 {
-  padding: 2rem;
+.m-b-s {
+  margin-block: var(--space-small, 0.5rem);
+}
+
+.m-b-m {
+  margin-block: var(--space-medium, 1rem);
+}
+
+.p-b-l {
+  padding-block: var(--space-large, 2rem);
+}
+
+.gap-1ch {
+  gap: 1ch;
 }
 
 /* ----------------------- */
@@ -220,7 +263,7 @@ body > header {
 
 .photo-grid {
   background-color: var(--clr-primary-light-1);
-  padding: 0.5rem;
+  padding: 1rem;
 
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -243,12 +286,6 @@ body > header {
     grid-column: span 1;
     aspect-ratio: 1 / 2;
   }
-}
-
-.grid-2-col {
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-evenly;
 }
 
 button {
@@ -278,7 +315,7 @@ form {
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
 
     gap: 1rem;
 }
