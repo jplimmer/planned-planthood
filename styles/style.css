@@ -164,6 +164,11 @@ a {
   text-align: center;
 }
 
+/* Layout */
+.p-2 {
+  padding: 2rem;
+}
+
 /* ----------------------- */
 /* || BLOCK */
 /* ----------------------- */
@@ -173,6 +178,7 @@ body > header {
   .wrapper {
     display: grid;
     grid-template-columns: 1fr auto;
+    align-items: center;
   }
 
   .logo {
@@ -217,13 +223,32 @@ body > header {
   padding: 0.5rem;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 2;
 
   img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    grid-column: span 2;
   }
+
+  img:first-of-type {
+    grid-row: span 2;
+    aspect-ratio: 1 / 2;
+  }
+
+  img:nth-of-type(2),
+  img:nth-of-type(3) {
+    grid-column: span 1;
+    aspect-ratio: 1 / 2;
+  }
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
 }
 
 button {
@@ -254,13 +279,14 @@ form {
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+
     gap: 1rem;
 }
 
 .card {
     display: grid;
     grid-template-rows: auto auto auto 1fr auto;
-    padding: 0.5em;
+    padding: 1em;
 
     background-color: var(--clr-primary-light-1);
     box-shadow: var(--border-shadow);
