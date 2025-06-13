@@ -76,6 +76,7 @@
   --space-medium: 1rem;
   --space-large: 2rem;
 
+  --icon-size: 15rem;
   --card-width: 12rem;
 }
 
@@ -208,8 +209,20 @@ a {
   margin-block: var(--space-medium, 1rem);
 }
 
+.m-b-l {
+  margin-block: var(--space-large, 2rem);
+}
+
+.p-m {
+  padding: var(--space-medium, 1rem);
+}
+
 .p-b-l {
   padding-block: var(--space-large, 2rem);
+}
+
+.p-il-m {
+  padding-inline: var(--space-medium, 1rem);
 }
 
 /* ----------------------- */
@@ -274,10 +287,20 @@ nav ul {
   }
 }
 
-.svg-bg {
+.icon {
+  order: -1;
   background-color: var(--clr-accent);
   border-radius: 50%;
-  padding: 1rem;
+  width: var(--icon-size);
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 50%;
+    height: 50%;
+  }
 }
 
 .photo-grid {
