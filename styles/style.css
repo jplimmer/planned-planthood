@@ -351,6 +351,11 @@ form {
             aspect-ratio: 3 / 2;
             object-fit: cover;
         }
+
+        /* svg {
+          width: 100%;
+
+        } */
     }
 
     .badges {
