@@ -30,6 +30,10 @@ git clone https://github.com/jplimmer/planned-planthood.git
 ├── assets/
 │   └── images/
 │       └── (image assets)
+│   └── icons/
+│       └── (icon assets)
+│   └── avatars/
+│       └── (avatar assets)
 ├── design/
 │   └── (template designs)
 └── README.md (this file)
