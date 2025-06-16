@@ -76,7 +76,7 @@
   --space-medium: 1rem;
   --space-large: 2rem;
 
-  --icon-size: 15rem;
+  --icon-size: 13rem;
   --card-width: 12rem;
 }
 
@@ -138,12 +138,6 @@ a {
   grid-column: full-width;
 }
 
-.grid-2-col {
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-evenly;
-}
-
 .center {
   margin-inline: auto;
 }
@@ -160,6 +154,10 @@ a {
 
 .space-between {
   justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
 }
 
 
@@ -401,7 +399,8 @@ form {
     }
 
     footer {
-        font-weight: 600;
+      font-size: var(--fs-200);
+        font-weight: var(--fw-600);
         margin-block-end: 0;
         
         .bio-pic {
@@ -412,7 +411,7 @@ form {
         }
 
         time {
-            font-weight: 400;
+            font-weight: var(--fw-400);
         }
     }
 }
@@ -423,7 +422,7 @@ form {
     flex-wrap: wrap;
     align-items: center;
     max-width: 100%;
-    gap: 0.2em;
+    gap: 0.25em;
     margin-block-start: var(--flow-space, 1em);
 }
 
@@ -509,13 +508,13 @@ body > footer {
   }
 
   .history {
-    .button {
-      align-self: end;
-    }
+      button {
+        align-self: flex-end;
+      }
   }
   
   .card figure img {
-    aspect-ratio: 2 / 3;
+    aspect-ratio: 5 / 6;
   }
 
   footer ul {
