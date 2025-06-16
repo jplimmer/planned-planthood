@@ -400,26 +400,6 @@ form {
         } */
     }
 
-    .badges {
-        order: -1;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        max-width: 100%;
-        gap: 0.2em;
-        margin-block-start: var(--flow-space, 1em);
-
-        .badge {
-            background-color: var(--clr-accent);
-            color: var(--clr-primary-light-1);
-            font-weight: var(--fw-bold);
-            font-size: var(--fs-100);
-            padding: 0.5em 1em;
-            border-radius: 4rem;
-            text-transform: uppercase;
-        }
-    }
-
     footer {
         font-weight: 600;
         margin-block-end: 0;
@@ -435,6 +415,26 @@ form {
             font-weight: 400;
         }
     }
+}
+
+.badges {
+    order: -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100%;
+    gap: 0.2em;
+    margin-block-start: var(--flow-space, 1em);
+}
+
+.badge {
+    background-color: var(--clr-accent);
+    color: var(--clr-primary-light-1);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-100);
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    border-radius: 4rem;
 }
 
 body > footer {
@@ -457,6 +457,7 @@ body > footer {
 /* || EXCEPTION */
 /* ----------------------- */
 
+/* 'Tablet' layout */
 @container (width > 480px) {
   .photo-grid {
     grid-template-columns: repeat(6, 1fr);
@@ -467,6 +468,7 @@ body > footer {
   }
 }
 
+/* 'Desktop' layout */
 @container (width > 768px) {
   body > header {
     .hamburger-menu {
@@ -519,5 +521,51 @@ body > footer {
   footer ul {
     flex-direction: column;
   }
+}
+
+/* Badge-type colours */
+
+[data-badge-type="robust"] {
+  background-color: var(--clr-robust);
+}
+
+[data-badge-type="green"] {
+  background-color: var(--clr-green);
+}
+
+[data-badge-type="flower"] {
+  background-color: var(--clr-flower);
+}
+
+[data-badge-type="colorful"] {
+  background-color: var(--clr-colorful);
+}
+
+[data-badge-type="sunloving"] {
+  background-color: var(--clr-sunloving);
+}
+
+[data-badge-type="air"] {
+  background-color: var(--clr-air);
+}
+
+[data-badge-type="decorative"] {
+  background-color: var(--clr-decorative);
+}
+
+[data-badge-type="edible"] {
+  background-color: var(--clr-edible);
+}
+
+[data-badge-type="easy"] {
+  background-color: var(--clr-easy);
+}
+
+[data-badge-type="fragrant"] {
+  background-color: var(--clr-fragrant);
+}
+
+[data-badge-type="fast"] {
+  background-color: var(--clr-fast);
 }
 
