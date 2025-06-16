@@ -291,19 +291,28 @@ nav ul {
   }
 }
 
-.icon {
-  order: -1;
-  background-color: var(--clr-accent);
-  border-radius: 50%;
-  width: var(--icon-size);
-  aspect-ratio: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.newsletter-sub,
+.history {  
+  > * {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+  }
+ 
+  .icon-circle {
+    order: -1;
+    background-color: var(--clr-accent);
+    border-radius: 50%;
+    width: var(--icon-size);
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  svg {
-    width: 50%;
-    height: 50%;
+    svg {
+      width: 50%;
+      height: 50%;
+    }
   }
 }
 
@@ -482,6 +491,27 @@ body > footer {
     }
   }
 
+  .newsletter-sub,
+  .history {
+    > * {
+      grid-template-columns: auto auto;
+      justify-content: space-around;
+      text-align: start;
+    }
+  }
+
+  .newsletter-sub {
+    .icon-circle {
+      order: 0;
+    }
+  }
+
+  .history {
+    .button {
+      align-self: end;
+    }
+  }
+  
   .card figure img {
     aspect-ratio: 2 / 3;
   }
