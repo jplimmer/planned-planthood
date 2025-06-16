@@ -225,6 +225,10 @@ a {
   padding-inline: var(--space-medium, 1rem);
 }
 
+.align-self-end {
+  align-self: end;
+}
+
 /* ----------------------- */
 /* || BLOCK */
 /* ----------------------- */
@@ -338,9 +342,15 @@ form {
   padding-inline-start: 1rem;
   border: 0.1rem solid var(--clr-neutral-900);
   border-radius: 2rem;
+  display: flex;
+  justify-content: center;
 
   input {
     border: none;
+  }
+
+  button {
+    margin-inline-start: auto;
   }
 }
 
@@ -438,7 +448,7 @@ body > footer {
 /* || EXCEPTION */
 /* ----------------------- */
 
-@container (min-width: 480px) {
+@container (width > 480px) {
   .photo-grid {
     grid-template-columns: repeat(6, 1fr);
   }
@@ -448,7 +458,7 @@ body > footer {
   }
 }
 
-@container (min-width: 768px) {
+@container (width > 768px) {
   body > header {
     .hamburger-menu {
       display: none;
