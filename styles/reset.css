@@ -15,7 +15,8 @@
 
 /* dark mode user-agent-styles */
 html {
-  color-scheme: dark light;
+  /* color-scheme: dark light; */
+  color-scheme: light;
 }
 
 /* min body height */
@@ -57,8 +58,8 @@ main {
 }
 
 /* remove list style but keep it as list for Safari browser - use with <ul role="list"> */
-ul[role='list'],
-ol[role='list'] {
+[role='list'],
+[role='list'] {
   list-style: none;
   margin: 0;
   padding: 0;
