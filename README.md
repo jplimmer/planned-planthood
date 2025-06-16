@@ -5,7 +5,22 @@ A recreation of a webpage design template using only HTML and CSS.
 ## Overview
 This project is a frontend exercise to accurately recreate the visual layout and styling of the given template, using only HTML for structure and CSS for presentation.
 
-<img src="design/PlannedPlanthood-Desktop.png" width="70%">
+<table>
+    <tr>
+        <td width="70%" valign="top">
+            <i>Desktop:</i><br>
+            <img src="design/PlannedPlanthood-Desktop.png" width="100%">
+            <br>
+            <br>
+            <i>Hover menu:</i><br>
+            <img src="design/PlannedPlanthood-Hover.png" width="100%">
+        </td>
+        <td width="20%" valign="top">
+            <i>Mobile:</i><br>
+            <img src="design/PlannedPlanthood-Mobile.png" width="100%">
+        </td>
+    </tr>
+</table>
 
 ## Technologies Used
 
