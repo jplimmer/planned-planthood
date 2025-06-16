@@ -94,7 +94,6 @@ body {
   line-height: 1.5;
   color: var(--clr-primary-dark, darkslategrey);
   background-color: var(--clr-accent-light-1, floralwhite);
-  height: 100svh;
 }
 
 h1, h2 {
@@ -231,6 +230,8 @@ a {
 /* || BLOCK */
 /* ----------------------- */
 body > header {
+  position: sticky;
+  top: 0px;
   color: var(--clr-accent, seagreen);
 
   .wrapper {
