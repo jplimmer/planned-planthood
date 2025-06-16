@@ -385,17 +385,22 @@ form {
     figure {
         order: -1;
         margin-block-start: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
 
         img {
             width: 100%;
             aspect-ratio: 3 / 2;
             object-fit: cover;
+            grid-row: 1;
+            grid-column: 1;
         }
 
-        /* svg {
-          width: 100%;
-
-        } */
+        .watermark {
+          scale: 40%;
+          filter: opacity(30%);
+        }
     }
 
     footer {
