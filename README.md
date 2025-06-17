@@ -12,7 +12,7 @@ This project is a frontend exercise to accurately recreate the visual layout and
             <img src="design/PlannedPlanthood-Desktop.png" width="100%">
             <br>
             <br>
-            <i>Hover menu:</i><br>
+            <i>Hover styles:</i><br>
             <img src="design/PlannedPlanthood-Hover.png" width="100%">
         </td>
         <td width="20%" valign="top">
