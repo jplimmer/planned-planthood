@@ -100,6 +100,7 @@
   --card-width: 12rem;
 }
 
+
 /* ----------------------- */
 /* || GLOBAL STYLES */
 /* ----------------------- */
@@ -113,11 +114,10 @@ body {
   font-weight: var(--fw-400, 400);
   line-height: 1.5;
   color: var(--clr-primary-dark, darkslategrey);
-  background-color: var(--clr-accent-light-1, floralwhite);
-  height: 100svh;
+  background-color: var(--clr-accent-light-1, whitesmoke);
 }
 
-h1, h2 {
+h2 {
   font-weight: var(--fw-bold, 700);
   line-height: 1.1;
   font-size: var(--fs-2, 2rem);
@@ -247,15 +247,26 @@ a {
   align-self: end;
 }
 
+
 /* ----------------------- */
 /* || BLOCK */
 /* ----------------------- */
 body > header {
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
   color: var(--clr-accent, seagreen);
 
-  .wrapper {
+  .header-bar {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+
+  nav {
+    display: flex;
+    height: 4em;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -277,9 +288,31 @@ body > header {
     }
   }
 
+  nav ul {
+    height: 100%;
+  }
+
   li {
-    margin-inline: 2.5rem;
+    height: 100%;
+
+    a {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  a:not(.logo):hover, 
+  a:not(.logo):focus-visible {
     cursor: pointer;
+    background-color: var(--clr-accent, seagreen);
+    text-decoration: none;
+    outline: none;
+    --logo-color: var(--clr-primary-light-1, white);
   }
 }
 
@@ -306,6 +339,10 @@ nav ul {
     line-height: 1;
     font-weight: var(--fw-bold, 700);
     color: var(--_logo-color);
+  }
+
+  &:hover {
+    text-decoration: none;
   }
 }
 
@@ -351,22 +388,23 @@ nav ul {
 }
 
 button {
-  margin: 0.1rem;
   padding: 0.5rem 1rem;
   background-color: var(--clr-accent, seagreen);
   color: var(--clr-primary-light-1, white);
-  border: none;
+  border: 0.1rem solid var(--clr-accent, seagreen);
   border-radius: 2rem;
 
   &:hover, &:focus-visible {
     cursor: pointer;
-    outline: 0.25rem solid var(--clr-sunloving, chocolate);
+    background-color: var(--clr-, white);
+    color: var(--clr-accent, seagreen);
   }
 }
 
 form {
-  max-width: 100%;
-  padding-inline-start: 1rem;
+  max-width: 55ch;
+  padding: 0.1rem;
+  padding-inline-start: 2rem;
   border: 0.1rem solid var(--clr-neutral-900, black);
   border-radius: 2rem;
   display: flex;
@@ -476,6 +514,7 @@ body > footer {
     margin-block: 0.5rem;
   }
 }
+
 
 /* ----------------------- */
 /* || EXCEPTION */
