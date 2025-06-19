@@ -270,6 +270,7 @@ img {
   color: var(--clr-accent, seagreen);
 }
 
+/* Box styling */
 .shadow {
   box-shadow: var(--border-shadow);
 }
@@ -295,6 +296,7 @@ img {
   text-align: center;
 }
 
+/* Font weight */
 .fw-bold {
   font-weight: var(--fw-bold, 700);
 }
@@ -307,6 +309,7 @@ img {
   font-weight: var(--fw-regular, 400);
 }
 
+/* Font size */
 .fs-xs {
   font-size: var(--fs--2, 0.625rem);
 }
@@ -386,10 +389,12 @@ body > header {
   z-index: 1000;
 
   * {
+    /* ensure all elements take up full height for hover styling */
     height: 100%;
   }
 
   nav {
+    /* based on logo sizing, adjust overall using font size */
     height: 4em;
   }
 
@@ -417,6 +422,7 @@ body > header {
   padding: 0 0.5rem;
 
   svg {
+    /* currently somewhat 'magic', could adapt based on header size */
     width: 3em;
     height: 3em;
     stroke: var(--_icon-color);
@@ -430,6 +436,7 @@ body > header {
 }
 
 .logo {
+  /* Sets colour for logo and text */
   --_logo-color: var(--logo-color, red);
 
   svg {
@@ -456,6 +463,7 @@ body > header {
   }
 }
 
+/* Hidden until desktop size */
 nav ul {
   display: none;
 }
@@ -546,6 +554,7 @@ form {
 
 /* 'Desktop' layout */
 @container (width > 768px) {
+  /* Display nav menus instead of hamburger */
   body > header {
     .hamburger-menu {
       display: none;
@@ -556,6 +565,7 @@ form {
     display: flex;
   }
 
+  /* More elaborate photo grid layout */
   .photo-grid {
     img:first-of-type {
       grid-row: span 2;
