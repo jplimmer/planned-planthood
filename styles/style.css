@@ -67,29 +67,6 @@
   --fs-4: clamp(1.8144rem, 1.4902rem + 1.6212vw, 2.7466rem);
   --fs-5: clamp(2.1773rem, 1.7404rem + 2.1843vw, 3.4332rem);
 
-  /* Styling */
-  --border-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  --opacity: 30%;
-
-  /* Layout */
-  --content-margin: 1rem;
-  --content-width: 60rem;
-  --flow-space: 1em;
-
-  --space-xsmall: 0.25rem;
-  --space-small: 0.5rem;
-  --space-medium: 1rem;
-  --space-large: 2rem;
-  --space-xlarge: 2.5rem;
-
-  --icon-size: 13rem;
-  --card-width: 12rem;
-  --watermark-sf: 40%;
-
-  --aspect-ratio-wide: 3 / 2;
-  --aspect-ratio-mid: 1 / 1;
-  --aspect-ratio-tall: 5 / 6;
-
   /* Utopia fluid space */
   /* @link https://utopia.fyi/space/calculator?c=320,14,1.2,1240,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
   --space-3xs: clamp(0.25rem, 0.2283rem + 0.1087cqi, 0.3125rem);
@@ -111,6 +88,23 @@
   --space-l-xl: clamp(1.75rem, 1.1848rem + 2.8261cqi, 3.375rem);
   --space-xl-2xl: clamp(2.625rem, 1.9728rem + 3.2609cqi, 4.5rem);
   --space-2xl-3xl: clamp(3.5rem, 2.3696rem + 5.6522cqi, 6.75rem);
+
+  /* Layout */
+  --content-margin: 1rem;
+  --content-width: 60rem;
+  --flow-space: var(--space-s, 1em);
+
+  --icon-size: 13rem;
+  --card-width: 12rem;
+  --watermark-sf: 40%;
+
+  --aspect-ratio-wide: 3 / 2;
+  --aspect-ratio-mid: 1 / 1;
+  --aspect-ratio-tall: 5 / 6;
+
+  /* Styling */
+  --border-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --opacity: 30%;
 }
 
 /* ------------------------ */
@@ -143,6 +137,7 @@ a {
   &:focus-visible {
     color: var(--clr-primary-light-1, white);
     text-decoration: underline;
+    outline: none;
   }
 }
 
@@ -190,7 +185,7 @@ img {
 .cluster {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-xsmall, 0.25rem);
+  gap: var(--space-3xs, 0.25rem);
   justify-content: flex-start;
   align-items: center;
 }
@@ -410,7 +405,6 @@ body > header {
   a:not(.logo):focus-visible {
     background-color: var(--clr-accent, seagreen);
     text-decoration: none;
-    outline: none;
   }
 }
 
@@ -483,6 +477,7 @@ button {
     cursor: pointer;
     background-color: var(--clr-primary-light-1, white);
     color: var(--clr-accent, seagreen);
+    outline: none;
   }
 }
 
