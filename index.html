@@ -8,12 +8,12 @@
     <title>Planned Planthood</title>
   </head>
 
-  <body class="content-grid flow">
+  <body class="[ content-grid flow ]">
 
-    <header class="header bg-pl-1 full-width content-grid">
-      <div class="header-bar">
+    <header class="[ full-width content-grid ][ theme-primary clr-accent ]">
+      <div class="[ grid grid--2col space-between ][ header-bar ]">
         <h1>
-          <a href="#" class="logo" aria-label="Planned Planthood Home">
+          <a href="#" class="[ flex align-center ][ gap-1 uppercase ][ logo ]" aria-label="Planned Planthood Home">
             <svg aria-hidden="true" viewBox="-5 -5 224 220" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" stroke-width="12">
                 <path
@@ -24,14 +24,14 @@
                 />
               </g>
             </svg>
-            <div class="company-name" aria-hidden="true">
+            <div class="[ flex flex--col ][ fw-bold ][ company-name ]" aria-hidden="true">
               <span>Planned</span>
               <span>Planthood</span>
             </div>
           </a>
         </h1>
-        <nav>
-          <button class="hamburger-menu" aria-label="Toggle navigation menu">
+        <nav class="flex">
+          <button class="[ no-border ][ hamburger-menu ]" aria-label="Toggle navigation menu">
             <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_429_11066)">
               <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -43,7 +43,7 @@
               </defs>
             </svg>
           </button>
-          <ul class="uppercase bold" role="list">
+          <ul class="[ uppercase fw-bold ]" role="list">
             <li><a href="#">Hem</a></li>
             <li><a href="#">Historisk</a></li>
             <li><a href="#">Tips</a></li>
@@ -53,13 +53,14 @@
       </div>
     </header>
     
-    <main class="full-width content-grid flow">
-      <section class="flow p-b-l">
-        <header class="flow text-align-center">
+    <main class="[ full-width content-grid flow ]">
+
+      <section class="[ flow ][ p-b-l ]">
+        <header class="[ flow ][ ta-center ]">
           <h2>Uppskattade växter</h2>
           <p class="center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, corporis ipsum.</p>
         </header>
-        <figure class="photo-grid">
+        <figure class="[ grid ][ bg-light shadow p-m ][ photo-grid ]">
           <img src="https://picsum.photos/id/239/800" alt="Lorem ipsum">
           <img src="https://picsum.photos/id/102/800" alt="Lorem ipsum">
           <img src="https://picsum.photos/id/248/800" alt="Lorem ipsum">
@@ -68,17 +69,18 @@
           <img src="https://picsum.photos/id/360/800" alt="Lorem ipsum">
         </figure>
       </section>
-      <aside class="newsletter-sub bg-pl-1 full-width content-grid flow m-b-m p-b-l">
-        <div>
-          <div class="sign-up flow flex-col">
+
+      <aside class="[ full-width content-grid flow ][ theme-primary m-b-m p-b-l ][ newsletter-sub ]">
+        <div class="[ grid grid--2row container ][ ta-center p-m ]">
+          <div class="[ flow flex flex--col flow-center ][ sign-up ]">
             <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
-            <form action="#" method="#">
+            <form class="[ flex space-between ][ border-black-small ]" action="#" method="#">
               <label for="email" class="visually-hidden">Email address</label>
-              <input type="email" id="email" placeholder="email@domain.com" autocomplete="email">
-              <button type="submit" class="uppercase">Skicka</button>
+              <input type="email" class="[ no-border ]" id="email" placeholder="email@domain.com" autocomplete="email">
+              <button type="submit" class="[ rounded-box ][ theme-accent border-green-small uppercase ]">Skicka</button>
             </form>
           </div>
-          <div class="icon-circle center">
+          <div class="[ flex circle flow-center ][ theme-accent order-first ][ decorative-icon ]">
             <svg
               aria-hidden="true"
               width="199"
@@ -165,308 +167,308 @@
       </aside>
         
       <section>
-        <ul class="card-grid m-b-m p-b-l" role="list">
-          <li class="card flow">
-            <h2>Gurka</h2>
-            <figure>
+        <ul class="[ gap-1 m-b-m p-b-l ][ card-grid ]" role="list">
+          <li class="[ flow ][ bg-light shadow p-m ][ card ]">
+            <h2 class="[ fs-large fw-semibold ]">Gurka</h2>
+            <figure class="[ grid flow-center ][ order-first ]">
               <img src="https://picsum.photos/id/131/400/400" alt="Lorem ipsum">
               <img class="watermark" src="assets/icons/icon-seedling-2.svg" alt="Lorem ipsum">
             </figure>
-            <ul class="badges" role="list">
-              <li class="badge" data-badge-type="flower">Blommor</li>
-              <li class="badge" data-badge-type="edible">Ätbart</li>
-              <li class="badge" data-badge-type="green">Grönska</li>
+            <ul class="[ cluster ][ order-first ]" role="list">
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="flower">Blommor</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="edible">Ätbart</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="green">Grönska</li>
             </ul>
             <p>Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning, omplantering, duschning och gödsling.</p>
-            <footer class="flex-row align-center">
+            <footer class="[ flex flex--row align-center ][ gap-1 fs-small fw-semibold ]">
               <img src="assets/avatars/AV17.png"
                     alt="Profile image"
-                    class="bio-pic"
+                    class="[ circle border-black-small ][ bio-pic ]"
                     width="50"
                     height="50">
               <div>
                 <address>Coolio</address>
-                <time datetime="2024-04-01">2024-04-01</time>
+                <time class="fw-regular" datetime="2024-04-01">2024-04-01</time>
               </div>
             </footer>
           </li>
-          <li class="card flow">
-            <h2>Tomat</h2>
-            <figure>
+          <li class="[ flow ][ bg-light shadow p-m ][ card ]">
+            <h2 class="[ fs-large fw-semibold ]">Tomat</h2>
+            <figure class="[ grid flow-center ][ order-first ]">
               <img src="https://picsum.photos/id/87/400/400" alt="Lorem ipsum">
               <img class="watermark" src="assets/icons/icon-seedling-2.svg" alt="Lorem ipsum">
             </figure>
-            <ul class="badges" role="list">
-              <li class="badge" data-badge-type="sunloving">Solälskande</li>
-              <li class="badge" data-badge-type="easy">Lättodlat</li>
-              <li class="badge" data-badge-type="edible">Ätbart</li>
+            <ul class="[ cluster ][ order-first ]" role="list">
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="sunloving">Solälskande</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="easy">Lättodlat</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="edible">Ätbart</li>
             </ul>
             <p>En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under sommaren.</p>
-            <footer class="flex-row align-center">
+            <footer class="[ flex flex--row align-center ][ gap-1 fs-small fw-semibold ]">
               <img src="assets/avatars/AV12.png"
                     alt="Profile image"
-                    class="bio-pic"
+                    class="[ circle border-black-small ][ bio-pic ]"
                     width="50"
                     height="50">
               <div>
                 <address>Anna Odlare</address>
-                <time datetime="2024-12-05">2024-12-05</time>
+                <time class="fw-regular" datetime="2024-12-05">2024-12-05</time>
               </div>
             </footer>
           </li>
-          <li class="card flow">
-            <h2>Pelargon</h2>
-            <figure>
+          <li class="[ flow ][ bg-light shadow p-m ][ card ]">
+            <h2 class="[ fs-large fw-semibold ]">Pelargon</h2>
+            <figure class="[ grid flow-center ][ order-first ]">
               <img src="https://picsum.photos/id/23/400/400" alt="Lorem ipsum">
               <img class="watermark" src="assets/icons/icon-seedling-2.svg" alt="Lorem ipsum">
             </figure>
-            <ul class="badges" role="list">
-              <li class="badge" data-badge-type="decorative">Dekorativ</li>
-              <li class="badge" data-badge-type="colorful">Färgstark</l>
-              <li class="badge" data-badge-type="robust">Tålig</li>
-              <li class="badge" data-badge-type="flower">Blommor</li>
+            <ul class="[ cluster ][ order-first ]" role="list">
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="decorative">Dekorativ</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="colorful">Färgstark</l>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="robust">Tålig</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="flower">Blommor</li>
             </ul>
             <p>En vacker och lättskött blomma som trivs både inne och ute under sommaren.</p>
-            <footer class="flex-row align-center">
+            <footer class="[ flex flex--row align-center ][ gap-1 fs-small fw-semibold ]">
               <img src="assets/avatars/AV85.png"
                     alt="Profile image"
-                    class="bio-pic"
+                    class="[ circle border-black-small ][ bio-pic ]"
                     width="50"
                     height="50">
               <div>
                 <address>Blomsterkalle</address>
-                <time datetime="2024-12-03">2024-12-03</time>
+                <time class="fw-regular" datetime="2024-12-03">2024-12-03</time>
               </div>
             </footer>
           </li>
-          <li class="card flow">
-            <h2>Basilika</h2>
-            <figure>
+          <li class="[ flow ][ bg-light shadow p-m ][ card ]">
+            <h2 class="[ fs-large fw-semibold ]">Basilika</h2>
+            <figure class="[ grid flow-center ][ order-first ]">
               <img src="https://picsum.photos/id/57/400/400" alt="Lorem ipsum">
               <img class="watermark" src="assets/icons/icon-seedling-2.svg" alt="Lorem ipsum">
             </figure>
-            <ul class="badges" role="list">
-              <li class="badge" data-badge-type="">Kryddor</li>
-              <li class="badge" data-badge-type="fragrant">Doftande</li>
-              <li class="badge" data-badge-type="sunloving">Solälskande</l>
+            <ul class="[ cluster ][ order-first ]" role="list">
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="">Kryddor</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="fragrant">Doftande</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="sunloving">Solälskande</l>
             </ul>
             <p>En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.</p>
-            <footer class="flex-row align-center">
+            <footer class="[ flex flex--row align-center ][ gap-1 fs-small fw-semibold ]">
               <img src="assets/avatars/AV63.png"
                     alt="Profile image"
-                    class="bio-pic"
+                    class="[ circle border-black-small ][ bio-pic ]"
                     width="50"
                     height="50">
               <div>
                 <address>Krydd-Malin</address>
-                <time datetime="2024-12-07">2024-12-07</time>
+                <time class="fw-regular" datetime="2024-12-07">2024-12-07</time>
               </div>
             </footer>
           </li>
-          <li class="card flow">
-            <h2>Sallad</h2>
-            <figure>
+          <li class="[ flow ][ bg-light shadow p-m ][ card ]">
+            <h2 class="[ fs-large fw-semibold ]">Sallad</h2>
+            <figure class="[ grid flow-center ][ order-first ]">
               <img src="https://picsum.photos/id/24/400/400" alt="Lorem ipsum">
               <img class="watermark" src="assets/icons/icon-seedling-2.svg" alt="Lorem ipsum">
             </figure>
-            <ul class="badges" role="list">
-              <li class="badge" data-badge-type="fast">Snabbväxande</li>
-              <li class="badge" data-badge-type="edible">Ätbart</li>
-              <li class="badge" data-badge-type="green">Grönska</li>
+            <ul class="[ cluster ][ order-first ]" role="list">
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="fast">Snabbväxande</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="edible">Ätbart</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="green">Grönska</li>
             </ul>
             <p>Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska måltider.</p>
-            <footer class="flex-row align-center">
+            <footer class="[ flex flex--row align-center ][ gap-1 fs-small fw-semibold ]">
               <img src="assets/avatars/AV11.png"
                     alt="Profile image"
-                    class="bio-pic"
+                    class="[ circle border-black-small ][ bio-pic ]"
                     width="50"
                     height="50">
               <div>
                 <address>Grönis</address>
-                <time datetime="2024-12-06">2024-12-06</time>
+                <time class="fw-regular" datetime="2024-12-06">2024-12-06</time>
               </div>
             </footer>
           </li>
-          <li class="card flow">
-            <h2>Ormbunke</h2>
-            <figure>
+          <li class="[ flow ][ bg-light shadow p-m ][ card ]">
+            <h2 class="[ fs-large fw-semibold ]">Ormbunke</h2>
+            <figure class="[ grid flow-center ][ order-first ]">
               <img src="https://picsum.photos/id/89/400/400" alt="Lorem ipsum">
               <img class="watermark" src="assets/icons/icon-seedling-2.svg" alt="Lorem ipsum">
             </figure>
-            <ul class="badges" role="list">
-              <li class="badge" data-badge-type="air">Luftfuktande</li>
-              <li class="badge" data-badge-type="green">Grönska</li>
-              <li class="badge" data-badge-type="decorative">Dekorativ</li>
+            <ul class="[ cluster ][ order-first ]" role="list">
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="air">Luftfuktande</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="green">Grönska</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="decorative">Dekorativ</li>
             </ul>
             <p>En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.</p>
-            <footer class="flex-row align-center">
+            <footer class="[ flex flex--row align-center ][ gap-1 fs-small fw-semibold ]">
               <img src="assets/avatars/AV77.png"
                     alt="Profile image"
-                    class="bio-pic"
+                    class="[ circle border-black-small ][ bio-pic ]"
                     width="50"
                     height="50">
               <div>
                 <address>Naturvännen</address>
-                <time datetime="2024-12-08">2024-12-08</time>
+                <time class="fw-regular" datetime="2024-12-08">2024-12-08</time>
               </div>
             </footer>
           </li>
-          <li class="card flow">
-            <h2>Gurka</h2>
-            <figure>
+          <li class="[ flow ][ bg-light shadow p-m ][ card ]">
+            <h2 class="[ fs-large fw-semibold ]">Gurka</h2>
+            <figure class="[ grid flow-center ][ order-first ]">
               <img src="https://picsum.photos/id/131/400/400" alt="Lorem ipsum">
               <img class="watermark" src="assets/icons/icon-seedling-2.svg" alt="Lorem ipsum">
             </figure>
-            <ul class="badges" role="list">
-              <li class="badge" data-badge-type="flower">Blommor</li>
-              <li class="badge" data-badge-type="edible">Ätbart</li>
-              <li class="badge" data-badge-type="green">Grönska</li>
+            <ul class="[ cluster ][ order-first ]" role="list">
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="flower">Blommor</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="edible">Ätbart</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="green">Grönska</li>
             </ul>
             <p>Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning, omplantering, duschning och gödsling.</p>
-            <footer class="flex-row align-center">
+            <footer class="[ flex flex--row align-center ][ gap-1 fs-small fw-semibold ]">
               <img src="assets/avatars/AV17.png"
                     alt="Profile image"
-                    class="bio-pic"
+                    class="[ circle border-black-small ][ bio-pic ]"
                     width="50"
                     height="50">
               <div>
                 <address>Coolio</address>
-                <time datetime="2024-04-01">2024-04-01</time>
+                <time class="fw-regular" datetime="2024-04-01">2024-04-01</time>
               </div>
             </footer>
           </li>
-          <li class="card flow">
-            <h2>Tomat</h2>
-            <figure>
+          <li class="[ flow ][ bg-light shadow p-m ][ card ]">
+            <h2 class="[ fs-large fw-semibold ]">Tomat</h2>
+            <figure class="[ grid flow-center ][ order-first ]">
               <img src="https://picsum.photos/id/87/400/400" alt="Lorem ipsum">
               <img class="watermark" src="assets/icons/icon-seedling-2.svg" alt="Lorem ipsum">
             </figure>
-            <ul class="badges" role="list">
-              <li class="badge" data-badge-type="sunloving">Solälskande</li>
-              <li class="badge" data-badge-type="easy">Lättodlat</li>
-              <li class="badge" data-badge-type="edible">Ätbart</li>
+            <ul class="[ cluster ][ order-first ]" role="list">
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="sunloving">Solälskande</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="easy">Lättodlat</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="edible">Ätbart</li>
             </ul>
             <p>En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under sommaren.</p>
-            <footer class="flex-row align-center">
+            <footer class="[ flex flex--row align-center ][ gap-1 fs-small fw-semibold ]">
               <img src="assets/avatars/AV12.png"
                     alt="Profile image"
-                    class="bio-pic"
+                    class="[ circle border-black-small ][ bio-pic ]"
                     width="50"
                     height="50">
               <div>
                 <address>Anna Odlare</address>
-                <time datetime="2024-12-05">2024-12-05</time>
+                <time class="fw-regular" datetime="2024-12-05">2024-12-05</time>
               </div>
             </footer>
           </li>
-          <li class="card flow">
-            <h2>Pelargon</h2>
-            <figure>
+          <li class="[ flow ][ bg-light shadow p-m ][ card ]">
+            <h2 class="[ fs-large fw-semibold ]">Pelargon</h2>
+            <figure class="[ grid flow-center ][ order-first ]">
               <img src="https://picsum.photos/id/23/400/400" alt="Lorem ipsum">
               <img class="watermark" src="assets/icons/icon-seedling-2.svg" alt="Lorem ipsum">
             </figure>
-            <ul class="badges" role="list">
-              <li class="badge" data-badge-type="decorative">Dekorativ</li>
-              <li class="badge" data-badge-type="colorful">Färgstark</l>
-              <li class="badge" data-badge-type="robust">Tålig</li>
-              <li class="badge" data-badge-type="flower">Blommor</li>
+            <ul class="[ cluster ][ order-first ]" role="list">
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="decorative">Dekorativ</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="colorful">Färgstark</l>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="robust">Tålig</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="flower">Blommor</li>
             </ul>
             <p>En vacker och lättskött blomma som trivs både inne och ute under sommaren.</p>
-            <footer class="flex-row align-center">
+            <footer class="[ flex flex--row align-center ][ gap-1 fs-small fw-semibold ]">
               <img src="assets/avatars/AV85.png"
                     alt="Profile image"
-                    class="bio-pic"
+                    class="[ circle border-black-small ][ bio-pic ]"
                     width="50"
                     height="50">
               <div>
                 <address>Blomsterkalle</address>
-                <time datetime="2024-12-03">2024-12-03</time>
+                <time class="fw-regular" datetime="2024-12-03">2024-12-03</time>
               </div>
             </footer>
           </li>
-          <li class="card flow">
-            <h2>Basilika</h2>
-            <figure>
+          <li class="[ flow ][ bg-light shadow p-m ][ card ]">
+            <h2 class="[ fs-large fw-semibold ]">Basilika</h2>
+            <figure class="[ grid flow-center ][ order-first ]">
               <img src="https://picsum.photos/id/57/400/400" alt="Lorem ipsum">
               <img class="watermark" src="assets/icons/icon-seedling-2.svg" alt="Lorem ipsum">
             </figure>
-            <ul class="badges" role="list">
-              <li class="badge" data-badge-type="">Kryddor</li>
-              <li class="badge" data-badge-type="fragrant">Doftande</li>
-              <li class="badge" data-badge-type="sunloving">Solälskande</l>
+            <ul class="[ cluster ][ order-first ]" role="list">
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="">Kryddor</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="fragrant">Doftande</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="sunloving">Solälskande</l>
             </ul>
             <p>En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.</p>
-            <footer class="flex-row align-center">
+            <footer class="[ flex flex--row align-center ][ gap-1 fs-small fw-semibold ]">
               <img src="assets/avatars/AV63.png"
                     alt="Profile image"
-                    class="bio-pic"
+                    class="[ circle border-black-small ][ bio-pic ]"
                     width="50"
                     height="50">
               <div>
                 <address>Krydd-Malin</address>
-                <time datetime="2024-12-07">2024-12-07</time>
+                <time class="fw-regular" datetime="2024-12-07">2024-12-07</time>
               </div>
             </footer>
           </li>
-          <li class="card flow">
-            <h2>Sallad</h2>
-            <figure>
+          <li class="[ flow ][ bg-light shadow p-m ][ card ]">
+            <h2 class="[ fs-large fw-semibold ]">Sallad</h2>
+            <figure class="[ grid flow-center ][ order-first ]">
               <img src="https://picsum.photos/id/24/400/400" alt="Lorem ipsum">
               <img class="watermark" src="assets/icons/icon-seedling-2.svg" alt="Lorem ipsum">
             </figure>
-            <ul class="badges" role="list">
-              <li class="badge" data-badge-type="fast">Snabbväxande</li>
-              <li class="badge" data-badge-type="edible">Ätbart</li>
-              <li class="badge" data-badge-type="green">Grönska</li>
+            <ul class="[ cluster ][ order-first ]" role="list">
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="fast">Snabbväxande</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="edible">Ätbart</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="green">Grönska</li>
             </ul>
             <p>Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska måltider.</p>
-            <footer class="flex-row align-center">
+            <footer class="[ flex flex--row align-center ][ gap-1 fs-small fw-semibold ]">
               <img src="assets/avatars/AV11.png"
                     alt="Profile image"
-                    class="bio-pic"
+                    class="[ circle border-black-small ][ bio-pic ]"
                     width="50"
                     height="50">
               <div>
                 <address>Grönis</address>
-                <time datetime="2024-12-06">2024-12-06</time>
+                <time class="fw-regular" datetime="2024-12-06">2024-12-06</time>
               </div>
             </footer>
           </li>
-          <li class="card flow">
-            <h2>Ormbunke</h2>
-            <figure>
+          <li class="[ flow ][ bg-light shadow p-m ][ card ]">
+            <h2 class="[ fs-large fw-semibold ]">Ormbunke</h2>
+            <figure class="[ grid flow-center ][ order-first ]">
               <img src="https://picsum.photos/id/89/400/400" alt="Lorem ipsum">
               <img class="watermark" src="assets/icons/icon-seedling-2.svg" alt="Lorem ipsum">
             </figure>
-            <ul class="badges" role="list">
-              <li class="badge" data-badge-type="air">Luftfuktande</li>
-              <li class="badge" data-badge-type="green">Grönska</li>
-              <li class="badge" data-badge-type="decorative">Dekorativ</li>
+            <ul class="[ cluster ][ order-first ]" role="list">
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="air">Luftfuktande</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="green">Grönska</li>
+              <li class="[ rounded-box ][ theme-accent fs-xsmall fw-bold uppercase ]" data-badge-type="decorative">Dekorativ</li>
             </ul>
             <p>En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.</p>
-            <footer class="flex-row align-center">
+            <footer class="[ flex flex--row align-center ][ gap-1 fs-small fw-semibold ]">
               <img src="assets/avatars/AV77.png"
                     alt="Profile image"
-                    class="bio-pic"
+                    class="[ circle border-black-small ][ bio-pic ]"
                     width="50"
                     height="50">
               <div>
                 <address>Naturvännen</address>
-                <time datetime="2024-12-08">2024-12-08</time>
+                <time class="fw-regular" datetime="2024-12-08">2024-12-08</time>
               </div>
             </footer>
           </li>
         </ul>
       </section>
      
-      <section class="history bg-pl-1 full-width content-grid m-b-m p-b-l">
-        <div>
-          <div class="flow flex-col">
+      <section class="[ full-width content-grid ][ theme-primary m-b-m p-b-l ][ history ]">
+        <div class="[ grid grid--2row ][ ta-center ]">
+          <div class="[ flow flex flex--col flow-center ]">
             <h2>Våra tidigare odlingar</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quia eos pariatur deserunt veritatis. Tenetur, ipsum! Iusto delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio nam quaerat doloribus?</p>
-            <button type="button">Planterade plantor</button>
+            <button type="button" class="[ rounded-box ][ theme-accent border-green-small align-self-end ]">Planterade plantor</button>
           </div>
-          <div class="icon-circle center">
+          <div class="[ flex circle flow-center ][ theme-accent order-first ][ decorative-icon ]">
             <svg aria-hidden="true" width="200" height="200" viewBox="0 0 155 209" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 fill-rule="evenodd"
@@ -494,12 +496,13 @@
           </div>
         </div>
       </section>
+
     </main>
     
-    <footer class="footer bg-accent full-width content-grid flow p-b-l">
-          <div class="flex-row space-between">
+    <footer class="[ full-width content-grid flow ][ theme-accent p-b-l ][ footer ]">
+          <div class="[ flex flex--row space-between ][ gap-1 ]">
             <div class="flow">
-              <a href="#" class="logo" aria-label="Planned Planthood Home">
+              <a href="#" class="[ flex align-center ][ gap-1 uppercase ][ logo ]" aria-label="Planned Planthood Home">
                 <svg width="214" height="210" viewBox="-5 -5 224 220" xmlns="http://www.w3.org/2000/svg">
                   <g fill="none" stroke-width="12">
                     <path
@@ -510,25 +513,25 @@
                     />
                   </g>
                 </svg>
-                <div class="company-name" aria-hidden="true">
+                <div class="[ flex flex--col ][ fw-bold ][ company-name ]" aria-hidden="true">
                   <span>Planned</span>
                   <span>Planthood</span>
                 </div>
               </a>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, veniam ducimus aut sint atque ullam alias perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione earum. Iure, eius molestias?</p>
               <address class="flow">
-                <a class="flex-row bold" href="tel:0201234567">
+                <a class="[ flex flex--row ][ gap-1 fw-bold ]" href="tel:0201234567">
                   <img src="assets/icons/icon-phone.svg" alt="Lorem ipsum" width="20" height="20">
                   Telefon: 020-1234567
                 </a>
-                <a class="flex-row bold" href="mailto:info@plannedplant.com">
+                <a class="[ flex flex--row ][ gap-1 fw-bold ]" href="mailto:info@plannedplant.com">
                   <img src="assets/icons/icon-email.svg" alt="Lorem ipsum" width="20" height="20">
                   info@plannedplant.com
                 </a>
               </address>
             </div>
             <nav>
-              <ul class="bold" role="list">
+              <ul class="[ flow ][ fw-bold ]" role="list">
                 <li><a href="#">Hem</a></li>
                 <li><a href="#">Historik</a></li>
                 <li><a href="#">Tips</a></li>
